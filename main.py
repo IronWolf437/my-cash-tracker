@@ -26,8 +26,14 @@ state = []
 amount = []
 current_money = []
 
-budget = get_input("What is your budget? ")
-data_collection("initial budget", budget, budget)
+
+while True:
+    budget = get_input("What is your budget? ")
+    
+    if budget >= 20:
+        data_collection("initial budget", budget, budget)
+        break
+
 
 while True:
     table = zip(Time, state, amount, current_money)
